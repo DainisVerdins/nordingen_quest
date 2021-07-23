@@ -1,0 +1,265 @@
+{
+	"info": {
+		"_postman_id": "ee68148e-9d04-4d7f-93b7-b21f5a4407fb",
+		"name": "SEB_REQUESTS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "autifikacija",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/html",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api-sandbox.sebgroup.com/mga/sps/oauth/oauth20/authorize?response_type=code&redirect_uri={{redirect_uri}}&scope={{scope}}&client_id={{cliend_id}}",
+					"protocol": "https",
+					"host": [
+						"api-sandbox",
+						"sebgroup",
+						"com"
+					],
+					"path": [
+						"mga",
+						"sps",
+						"oauth",
+						"oauth20",
+						"authorize"
+					],
+					"query": [
+						{
+							"key": "response_type",
+							"value": "code"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "{{redirect_uri}}"
+						},
+						{
+							"key": "scope",
+							"value": "{{scope}}"
+						},
+						{
+							"key": "client_id",
+							"value": "{{cliend_id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autifikacija_post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "text/html",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "feb8AKh8Ap5K0ZN3z7djmXwnWZ91pN",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "{{scope}}",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "{{cliend_id}}",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "{{client_secret}}",
+							"type": "text"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "{{redirect_uri}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api-sandbox.sebgroup.com/mga/sps/oauth/oauth20/token",
+					"protocol": "https",
+					"host": [
+						"api-sandbox",
+						"sebgroup",
+						"com"
+					],
+					"path": [
+						"mga",
+						"sps",
+						"oauth",
+						"oauth20",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show_all_transactions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://api-sandbox.sebgroup.com/ais/v1/identified2/branded-card-accounts/:accountId/transactions",
+					"protocol": "https",
+					"host": [
+						"api-sandbox",
+						"sebgroup",
+						"com"
+					],
+					"path": [
+						"ais",
+						"v1",
+						"identified2",
+						"branded-card-accounts",
+						":accountId",
+						"transactions"
+					],
+					"query": [
+						{
+							"key": "dateFrom",
+							"value": "{{dateFrom}}",
+							"description": "optional but in documentation requered",
+							"disabled": true
+						},
+						{
+							"key": "dateTo",
+							"value": "{{dateTo}}",
+							"description": "optional but in documentation requered",
+							"disabled": true
+						},
+						{
+							"key": "bookingStatus",
+							"value": "{{bookingStatus}}",
+							"description": "optional but in documentation requered",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "accountId",
+							"value": "{{accountId}}",
+							"description": "you can use any accountID it will still show all of them\nbut how to make just only one?\n"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "redirect_uri",
+			"value": "https://example.com/"
+		},
+		{
+			"key": "scope",
+			"value": "psd2_accounts psd2_payments"
+		},
+		{
+			"key": "cliend_id",
+			"value": "1lRpPVFcNNJiRM3mYd2z"
+		},
+		{
+			"key": "client_secret",
+			"value": "VEgtGle6ZT53ylOg4bgv"
+		},
+		{
+			"key": "token",
+			"value": "3rcgeJnh6ul338YIvLcx"
+		},
+		{
+			"key": "accountId",
+			"value": "1212121212121212121212121212121212121"
+		},
+		{
+			"key": "dateFrom",
+			"value": "2019-07-26"
+		},
+		{
+			"key": "bookingStatus",
+			"value": "false"
+		},
+		{
+			"key": "dateTo",
+			"value": "2019-07-26"
+		}
+	]
+}
