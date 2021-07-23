@@ -18,7 +18,14 @@ def get_request() -> str:
 
 def main():
     print("Hello World of SEB API!")
-    r = requests.get('https://api.github.com/events')
+    url = "https://api-sandbox.sebgroup.com/mga/sps/oauth/oauth20/authorize"
+    query_params = {'response_type': 'code',
+                    'redirect_uri': 'https://example.com/',
+                    'scope': ['psd2_accounts', 'psd2_payments'],
+                    'client_id': '1lRpPVFcNNJiRM3mYd2z'
+                    }
+    r = requests.get(url, params=query_params)
+    print(r.text)
     print(r.status_code)
     print()
 
