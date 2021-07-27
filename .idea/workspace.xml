@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d76b163-2e0a-46af-af29-8d28959bc725" name="Default Changelist" comment="hm" />
+    <list default="true" id="5d76b163-2e0a-46af-af29-8d28959bc725" name="Default Changelist" comment="merged two branches" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,11 +10,10 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="_handelsbanken" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="MIXED" />
   </component>
   <component name="ProjectId" id="1viGnZOdv87OViW503LSTIqkjPM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -57,7 +56,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.seb_requests" />
         <item itemvalue="Python.seb_requests" />
         <item itemvalue="Python.seb_requests" />
         <item itemvalue="Python.seb_requests" />
@@ -144,21 +142,7 @@
       <option name="project" value="LOCAL" />
       <updated>1627418385715</updated>
     </task>
-    <task id="LOCAL-00011" summary="merged two branches">
-      <created>1627418536772</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1627418536772</updated>
-    </task>
-    <task id="LOCAL-00012" summary="hm">
-      <created>1627418708227</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1627418708227</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -196,7 +180,6 @@
     <MESSAGE value="SEB is done , now with promt and mini guide how to ." />
     <MESSAGE value="init of new brunch" />
     <MESSAGE value="merged two branches" />
-    <MESSAGE value="hm" />
-    <option name="LAST_COMMIT_MESSAGE" value="hm" />
+    <option name="LAST_COMMIT_MESSAGE" value="merged two branches" />
   </component>
 </project>
